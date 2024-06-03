@@ -1,0 +1,15 @@
+@model TeacherModel;
+
+@{
+    ViewData["Title"] = "Borrar Maestro";
+
+}
+
+<div class="mb-3">
+    ¿Estas seguro que deseas borrar al maestro?
+</div>
+
+<form asp-controller="Teacher" asp-action="TeacherDeleted">
+    <button type="summit" class="btn btn-danger" asp-action="TeacherList" asp-controller="Teacher">Borrar</button>
+    <a asp-controller="Teacher" asp-action="TeacherList" class="btn btn-secundary">Regresar</a>
+</form>

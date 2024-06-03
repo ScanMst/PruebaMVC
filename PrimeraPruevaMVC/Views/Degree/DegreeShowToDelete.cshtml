@@ -1,0 +1,15 @@
+@model DegreeModel;
+
+@{
+    ViewData["Title"] = "Borrar la Carrera";
+
+}
+
+<div class="mb-3">
+    ¿Estas seguro que deseas borrar la carrera: @Model.Nombre?
+</div>
+
+<form asp-controller="Degree" asp-action="DegreeDeleted">
+    <button type="summit" class="btn btn-danger" asp-action="DegreeList" asp-controller="Degree">Borrar</button>
+    <a asp-controller="Degree" asp-action="DegreeList" class="btn btn-secundary">Regresar</a>
+</form>

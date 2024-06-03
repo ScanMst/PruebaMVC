@@ -1,0 +1,42 @@
+@model StudentModel;
+
+@{
+    ViewData["Title"] = "Editar al Alumno";
+
+}
+
+<div class="text-center">
+    <h1 class="display-2">Editar al Alumno</h1>  
+</div>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-controller="Student" asp-action="StudentAdd">
+    <div class="mb-3">
+        <label asp-for="Nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" asp-for="Nombre" placeholder="Escriba el Nombre del Alumno" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Matricula" class="form-label">Matricula</label>
+        <input type="text" class="form-control" asp-for="Matricula" placeholder="Escriba la Matricula" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Carrera" class="form-label">Carrera</label>
+        <input type="text" class="form-control" asp-for="Carrera" placeholder="Escriba la Carrera" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Sexo" class="form-label">Sexo</label>
+        <input type="text" class="form-control" asp-for="Sexo" placeholder="Escriba el Sexo" />
+    </div>
+
+     <div class="mb-3">
+        <label asp-for="Edad" class="form-label">Edad</label>
+        <input type="text" class="form-control" asp-for="Edad" placeholder="Escriba la Edad" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-controller="Student" asp-action="StudentList" class="btn btn-secundary mb-3">Regresar</a>
+</form>

@@ -1,0 +1,42 @@
+@model TeacherModel;
+
+@{
+    ViewData["Title"] = "Alta de Maestros";
+}
+
+
+<div class="text-center">
+    <h1 class="display-2">Alta de Maestros</h1>  
+</div>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-controller="Teacher" asp-action="TeacherAdd">
+    <div class="mb-3">
+        <label asp-for="Nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" asp-for="Nombre" placeholder="Escriba el Nombre del Maestro" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Apellidos" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" asp-for="Apellidos" placeholder="Escriba los Apellidos del Maestro" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Titulo" class="form-label">Titulo</label>
+        <input type="text" class="form-control" asp-for="Titulo" placeholder="Escriba el Titulo del Maestro" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="GradoEstudios" class="form-label">Grado de Estudios</label>
+        <input type="text" class="form-control" asp-for="GradoEstudios" placeholder="Escriba el Grado de Estudios del Maestro" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Salario" class="form-label">Salario</label>
+        <input type="text" class="form-control" asp-for="Salario" placeholder="Escriba el Salario del Maestro" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-controller="Teacher" asp-action="TeacherList" class="btn btn-secundary mb-3">Regresar</a>
+</form>
