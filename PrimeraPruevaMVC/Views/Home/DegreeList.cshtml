@@ -1,0 +1,23 @@
+@model DegreeModel;
+
+@{
+    ViewData["Tile"] = "Listado de alumnos";
+    DateTime fechainscripcion = new DateTime(2024, 05, 21) ;
+
+}
+
+<h2>@DateTime.Now</h2>
+<i>@fechainscripcion.ToLongDateString()</i>
+
+<h1 class="display-2">Listado de Carreras</h1>
+<h3>@Model.Nombre.ToUpper() Es la mejor carrera <b>carrera</b></h3>
+
+<label>Esto es una prueba</label>
+<div class="text-center">
+    <h1 class="display-4">Bienvenido a mi pagina de alumnos</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div>
+    <center><img src="/imagenes/care1.png"></center>
+</div>

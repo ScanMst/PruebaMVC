@@ -27,7 +27,7 @@ public class HomeController : Controller
     {
         StudentModel alumno = new StudentModel();
         alumno.Nombre = "Ulises Del Villar";
-        alumno.Carrera = "Ing. TI con Orientacion en Pentesting y Hacking Etico";
+        alumno.Carrera = "Ing. TI con orientacion en DS y Enfoque en Pentesting y Hacking Etico";
 
         return View(alumno);
     }

@@ -89,3 +89,4 @@ C:\Users\Ulises\Documents\POO2_Trabajos\EjerciciosClase\PrimeraPruevaMVC\obj\Deb
 C:\Users\Ulises\Documents\POO2_Trabajos\EjerciciosClase\PrimeraPruevaMVC\obj\Debug\net9.0\PrimeraPruevaMVC.pdb
 C:\Users\Ulises\Documents\POO2_Trabajos\EjerciciosClase\PrimeraPruevaMVC\obj\Debug\net9.0\PrimeraPruevaMVC.genruntimeconfig.cache
 C:\Users\Ulises\Documents\POO2_Trabajos\EjerciciosClase\PrimeraPruevaMVC\obj\Debug\net9.0\ref\PrimeraPruevaMVC.dll
+C:\Users\Ulises\Documents\POO2_Trabajos\EjerciciosClase\PrimeraPruevaMVC\obj\Debug\net9.0\PrimeraPruevaMVC.sourcelink.json
