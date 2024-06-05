@@ -1,5 +1,6 @@
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNetCore.Mvc;
+using PrimeraPruevaMVC.Entity;
 using PrimeraPruevaMVC.Models;
 
 namespace PrimeraPruevaMVC.Controllers;
@@ -8,10 +9,12 @@ public class DegreeController : Controller
 {
     
     private readonly ILogger<DegreeController> _logger;
+    private readonly ILogger<ApplicationDBContext> _context;
 
-    public DegreeController(ILogger<DegreeController> logger)
+    public DegreeController(ApplicationDBContext context, ILogger<DegreeController> logger)
     {
         _logger = logger;
+        _context = context;
     }
 
     public IActionResult DegreeAdd()
@@ -49,13 +52,21 @@ public class DegreeController : Controller
 
         if (!ModelState.IsValid)
         {
+            _logger.LogWarning(degree.Nombre);
             _logger.LogWarning("El modelo no es valido");
             return View();
         }
        
-        string p = "valor indefinido";
+        _logger.LogInformation("El valor es valido");
 
-        _logger.LogInformation("El valor de p es: " + p);
+        Degree degreeBD = new Degree();
+        degreeBD.Id = new Guid();
+        degreeBD.Name = degree.Nombre;
+        degreeBD.CreationDate = DateTime.Today;
+
+        _context.Degrees.Add(degreeDB);
+        _context.SaveChanges();
+
         return Redirect("DegreeList");
     }
 
@@ -76,7 +87,6 @@ public class DegreeController : Controller
             carrera.Nombre= "Carrera no es valida";
             return View(carrera);
         }
-
         _logger.LogInformation("El modelo es valido");
         return Redirect("DegreeList");
 

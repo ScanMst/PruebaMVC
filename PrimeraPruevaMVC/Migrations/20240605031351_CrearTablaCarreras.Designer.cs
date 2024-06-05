@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace PrimeraPruevaMVC.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20240604210241_CrearCarreras")]
-    partial class CrearCarreras
+    [Migration("20240605031351_CrearTablaCarreras")]
+    partial class CrearTablaCarreras
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,6 +32,10 @@ namespace PrimeraPruevaMVC.Migrations
 
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
